@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-fbow",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -13,7 +13,7 @@
     "jest": "^21.2.1"
   },
   "dependencies": {
-    "fbow": "^1.0.2"
+    "fbow": "^1.0.3"
   },
   "description": "Babel plugin used to auto-polyfill For Better or Worse",
   "repository": {
