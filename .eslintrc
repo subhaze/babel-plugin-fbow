@@ -1,0 +1,6 @@
+{
+	"extends": ["tombras"],
+	"env": {
+		"jest": true
+	}
+}
