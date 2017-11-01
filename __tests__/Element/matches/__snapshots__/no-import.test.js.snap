@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`doesn't add matches import 1`] = `
+"
+const a = document.querySelector(\\"a\\");
+const div = document.querySelector(\\"div\\");
+a.matches(\\"div\\");
+div.matches(\\"p\\");"
+`;

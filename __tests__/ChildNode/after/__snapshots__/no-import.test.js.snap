@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`doesn't add after import 1`] = `
+"
+const a = document.querySelector(\\"a\\");
+const div = document.querySelector(\\"div\\");
+a.after(div);
+div.after(a);"
+`;

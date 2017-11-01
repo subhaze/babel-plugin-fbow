@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`doesn't add replaceWith import 1`] = `
+"
+var parent = document.createElement(\\"div\\");
+var child = document.createElement(\\"p\\");
+parent.appendChild(child);
+var span = document.createElement(\\"span\\");
+
+child.replaceWith(span);
+span.replaceWith(child);"
+`;

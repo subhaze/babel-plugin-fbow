@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`adds import for before once 1`] = `
+"import \\"fbow/ChildNode/before\\";
+
+const a = document.querySelector(\\"a\\");
+const div = document.querySelector(\\"div\\");
+a.before(div);
+div.before(a);"
+`;

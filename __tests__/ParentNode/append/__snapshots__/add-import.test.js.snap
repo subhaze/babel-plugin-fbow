@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`adds import for append once 1`] = `
+"import \\"fbow/ParentNode/append\\";
+
+var parent = document.createElement(\\"div\\");
+var p = document.createElement(\\"p\\");
+var p2 = document.createElement(\\"p\\");
+parent.append(p);
+parent.append(p2);"
+`;

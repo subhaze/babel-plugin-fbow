@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`adds import for after once 1`] = `
+"import \\"fbow/ChildNode/after\\";
+
+const a = document.querySelector(\\"a\\");
+const div = document.querySelector(\\"div\\");
+a.after(div);
+div.after(a);"
+`;

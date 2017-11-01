@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`adds import for matches once 1`] = `
+"import \\"fbow/Element/matches\\";
+
+const a = document.querySelector(\\"a\\");
+const div = document.querySelector(\\"div\\");
+a.matches(\\"div\\");
+div.matches(\\"p\\");"
+`;
