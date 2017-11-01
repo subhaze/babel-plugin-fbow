@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Michael Russell",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.0"
@@ -14,5 +14,13 @@
   "dependencies": {
     "fbow": "^1.0.2"
   },
-  "description": "Babel plugin used to auto-polyfill For Better or Worse"
+  "description": "Babel plugin used to auto-polyfill For Better or Worse",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subhaze/babel-plugin-fbow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/subhaze/babel-plugin-fbow/issues"
+  },
+  "homepage": "https://github.com/subhaze/babel-plugin-fbow#readme"
 }
