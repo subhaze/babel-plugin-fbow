@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`adds import for CustomEvent constructor once 1`] = `
+"
+// @no-fbow
+obj.addEventListener(\\"cat\\", function (e) {
+  process(e.detail);
+});
+var event = new CustomEvent(\\"cat\\", {
+  detail: {
+    hazcheeseburger: true
+  }
+});
+obj.dispatchEvent(event);"
+`;

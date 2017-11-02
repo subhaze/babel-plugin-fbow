@@ -5,6 +5,7 @@ const NewExpressionKeys = Object.keys(importMap.NewExpression);
 
 module.exports = function main({ types: t }) {
 	const addedFills = [];
+	let addPolyfills = true;
 	function addImport(path, polyfillPath) {
 		if (addedFills.includes(polyfillPath)) return;
 		addedFills.push(polyfillPath);
@@ -18,8 +19,15 @@ module.exports = function main({ types: t }) {
 	return {
 		name: "for-better-or-worse",
 		visitor: {
-			MemberExpression(path, state) {
+			Program(path, state) {
 				if (state.file.opts.sourceType === "script") return;
+				const lineComments = state.file.ast.comments.filter(
+					c => c.type === "CommentLine" && !!c.value.match(/@no-fbow/gi),
+				);
+				addPolyfills = !lineComments.length;
+			},
+			MemberExpression(path, state) {
+				if (state.file.opts.sourceType === "script" || !addPolyfills) return;
 				if (t.isIdentifier(path.node.property)) {
 					if (MemberExpressionKeys.includes(path.node.property.name)) {
 						addImport(
@@ -30,7 +38,7 @@ module.exports = function main({ types: t }) {
 				}
 			},
 			NewExpression(path, state) {
-				if (state.file.opts.sourceType === "script") return;
+				if (state.file.opts.sourceType === "script" || !addPolyfills) return;
 				if (t.isIdentifier(path.node.callee)) {
 					if (NewExpressionKeys.includes(path.node.callee.name)) {
 						addImport(path, importMap.NewExpression.CustomEvent);

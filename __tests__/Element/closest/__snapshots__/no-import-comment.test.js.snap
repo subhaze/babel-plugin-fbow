@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`adds import for closest once 1`] = `
+"
+// @no-fbow
+const a = document.querySelector(\\"a\\");
+const div = document.querySelector(\\"div\\");
+a.closest(\\"div\\");
+div.closest(\\"p\\");"
+`;
